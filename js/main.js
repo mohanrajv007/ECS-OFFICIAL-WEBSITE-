@@ -166,7 +166,7 @@
      ========================================================= */
   var plate = document.getElementById('plate');
   var photo = document.getElementById('photo');
-  setTimeout(function(){ plate.classList.add('in'); }, 260);
+  if(plate) setTimeout(function(){ plate.classList.add('in'); }, 260);
 
   /* =========================================================
      5. SCROLL-LINKED: progress hairline + plate parallax
@@ -261,8 +261,15 @@
      8. FORM — demo only, nothing is sent anywhere
      ========================================================= */
   var form = document.getElementById('form'), status = document.getElementById('status');
-  form.addEventListener('submit', function(e){
+  if(form) form.addEventListener('submit', function(e){
     e.preventDefault();
+
+    /* honeypot: a real visitor never sees or fills this field */
+    if(form.elements['_gotcha'] && form.elements['_gotcha'].value){
+      form.reset();
+      return;
+    }
+
     var name = form.elements['name'].value.trim(),
         mail = form.elements['email'].value.trim();
     if(!name || !mail || mail.indexOf('@') < 0){

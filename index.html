@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; form-action 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Excelsior Consultancy Services — Corporate Advisory, TEV Studies &amp; DPR, Chennai</title>
 <meta name="description" content="Excelsior Consultancy Services is a corporate advisory firm in Chennai delivering TEV studies, Detailed Project Reports, valuation, debt syndication and Virtual CFO services across India.">
@@ -24,6 +26,7 @@
       <a href="#about">About</a>
       <a href="#pillars">Pillars</a>
       <a href="#services">Services</a>
+      <a href="what-we-take-on.html">Capabilities</a>
       <a href="#sectors">Sectors</a>
       <a href="#assignments">Assignments</a>
       <a href="#team">Team</a>
@@ -327,13 +330,17 @@
 
       <div class="rv">
         <form class="form" id="form" novalidate>
-          <div class="form-row">
-            <div class="field"><label for="f-name" style="color:rgba(252,252,251,.45)">Your name</label><input id="f-name" name="name" type="text" required style="border-bottom-color:var(--line-i)"></div>
-            <div class="field"><label for="f-co" style="color:rgba(252,252,251,.45)">Company</label><input id="f-co" name="company" type="text" style="border-bottom-color:var(--line-i)"></div>
+          <div class="hp-field" aria-hidden="true">
+            <label for="f-hp">Leave this field empty</label>
+            <input id="f-hp" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
           </div>
           <div class="form-row">
-            <div class="field"><label for="f-mail" style="color:rgba(252,252,251,.45)">Email</label><input id="f-mail" name="email" type="email" required style="border-bottom-color:var(--line-i)"></div>
-            <div class="field"><label for="f-ph" style="color:rgba(252,252,251,.45)">Telephone</label><input id="f-ph" name="phone" type="tel" style="border-bottom-color:var(--line-i)"></div>
+            <div class="field"><label for="f-name" style="color:rgba(252,252,251,.45)">Your name</label><input id="f-name" name="name" type="text" required maxlength="100" autocomplete="name" style="border-bottom-color:var(--line-i)"></div>
+            <div class="field"><label for="f-co" style="color:rgba(252,252,251,.45)">Company</label><input id="f-co" name="company" type="text" maxlength="120" autocomplete="organization" style="border-bottom-color:var(--line-i)"></div>
+          </div>
+          <div class="form-row">
+            <div class="field"><label for="f-mail" style="color:rgba(252,252,251,.45)">Email</label><input id="f-mail" name="email" type="email" required maxlength="180" autocomplete="email" style="border-bottom-color:var(--line-i)"></div>
+            <div class="field"><label for="f-ph" style="color:rgba(252,252,251,.45)">Telephone</label><input id="f-ph" name="phone" type="tel" maxlength="20" autocomplete="tel" style="border-bottom-color:var(--line-i)"></div>
           </div>
           <div class="field"><label for="f-svc" style="color:rgba(252,252,251,.45)">Service required</label>
             <select id="f-svc" name="service" style="border-bottom-color:var(--line-i)">
@@ -349,7 +356,7 @@
               <option>Tax advisory</option>
               <option>Not yet certain</option>
             </select></div>
-          <div class="field"><label for="f-msg" style="color:rgba(252,252,251,.45)">Tell us about the project</label><textarea id="f-msg" name="message" rows="4" style="border-bottom-color:var(--line-i)"></textarea></div>
+          <div class="field"><label for="f-msg" style="color:rgba(252,252,251,.45)">Tell us about the project</label><textarea id="f-msg" name="message" rows="4" maxlength="4000" style="border-bottom-color:var(--line-i)"></textarea></div>
           <div style="display:flex;flex-wrap:wrap;align-items:center;gap:24px">
             <button class="sbtn" type="submit" style="border-color:rgba(252,252,251,.55);color:var(--paper)">Send enquiry</button>
             <p class="status" id="status" role="status"></p>
