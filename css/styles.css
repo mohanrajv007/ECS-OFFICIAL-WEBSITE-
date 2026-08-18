@@ -53,6 +53,9 @@
 
   --gutter:clamp(20px,6vw,110px);
   --maxw:1180px;
+
+  --shadow-sm:0 1px 2px rgba(22,22,26,.04),0 6px 18px rgba(22,22,26,.05);
+  --shadow-md:0 4px 10px rgba(22,22,26,.05),0 18px 40px rgba(22,22,26,.09);
 }
 
 *{box-sizing:border-box;margin:0;padding:0}
@@ -91,7 +94,7 @@ p{max-width:58ch}
 .head{position:fixed;top:0;left:0;right:0;z-index:70;
   transition:background .5s ease,border-color .5s ease;border-bottom:1px solid transparent}
 .head.stuck{background:rgba(252,252,251,.88);backdrop-filter:blur(16px) saturate(160%);
-  border-bottom-color:var(--line-2)}
+  border-bottom-color:var(--line-2);box-shadow:0 1px 24px rgba(22,22,26,.045)}
 .head-in{display:flex;align-items:center;justify-content:space-between;gap:24px;height:84px}
 .mark{display:flex;flex-direction:column;gap:6px;line-height:1}
 .mark b{font-family:var(--display);font-weight:300;font-size:22px;letter-spacing:.26em}
@@ -155,9 +158,11 @@ p{max-width:58ch}
 /* ---------- disciplines ---------- */
 .disc{border-top:1px solid var(--line)}
 .disc-item{display:grid;grid-template-columns:38px minmax(0,.8fr) minmax(0,1.3fr);
-  gap:clamp(16px,3.4vw,56px);align-items:baseline;padding:32px 4px;
-  border-bottom:1px solid var(--line-2);transition:padding-left .5s ease,background .5s ease}
-.disc-item:hover{padding-left:18px;background:rgba(46,95,85,.035)}
+  gap:clamp(16px,3.4vw,56px);align-items:baseline;padding:32px 4px;position:relative;z-index:0;
+  border-bottom:1px solid var(--line-2);
+  transition:padding-left .5s ease,background .5s ease,box-shadow .5s ease}
+.disc-item:hover{padding-left:18px;background:rgba(46,95,85,.035);
+  box-shadow:var(--shadow-sm)}
 .disc-item .r{font-family:var(--display);font-weight:300;font-size:14px;color:var(--verdigris);letter-spacing:.08em}
 .disc-item h3{transition:color .4s ease}
 .disc-item:hover h3{color:var(--verdigris)}
@@ -246,8 +251,9 @@ p{max-width:58ch}
 .field textarea{resize:vertical;min-height:92px;font-family:var(--body)}
 .sbtn{background:none;border:1px solid var(--graphite);color:var(--graphite);padding:15px 36px;
   font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;cursor:pointer;
-  transition:background .4s ease,color .4s ease,border-color .4s ease}
-.sbtn:hover{background:var(--verdigris);border-color:var(--verdigris);color:var(--paper)}
+  transition:background .4s ease,color .4s ease,border-color .4s ease,box-shadow .4s ease,transform .4s ease}
+.sbtn:hover{background:var(--verdigris);border-color:var(--verdigris);color:var(--paper);
+  box-shadow:0 10px 26px rgba(46,95,85,.28);transform:translateY(-2px)}
 .status{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--verdigris);min-height:16px}
 .det{display:grid;gap:7px;padding:23px 0;border-bottom:1px solid var(--line-2)}
 .det:first-of-type{border-top:1px solid var(--line)}
@@ -363,10 +369,10 @@ p{max-width:58ch}
 
 /* ---- refined hover physics ---- */
 .disc-item,.entry,.sect a{will-change:transform}
-.file{transition:background .6s var(--ease),transform .7s var(--ease)}
-.file:hover{transform:translateY(-6px)}
-.method article{transition:background .6s var(--ease),transform .7s var(--ease)}
-.method article:hover{transform:translateY(-4px)}
+.file{transition:background .6s var(--ease),transform .7s var(--ease),box-shadow .7s var(--ease)}
+.file:hover{transform:translateY(-6px);box-shadow:var(--shadow-md);z-index:1}
+.method article{transition:background .6s var(--ease),transform .7s var(--ease),box-shadow .7s var(--ease)}
+.method article:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);z-index:1}
 
 /* ---- the plate: parallax + slow drift ---- */
 .plate{will-change:transform}
@@ -417,7 +423,9 @@ p{max-width:58ch}
 
 /* ---------- four pillars ---------- */
 .pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line-2)}
-.pillar{background:var(--paper);padding:40px 28px 46px;position:relative}
+.pillar{background:var(--paper);padding:40px 28px 46px;position:relative;
+  transition:transform .6s var(--ease-soft),box-shadow .6s var(--ease-soft)}
+.pillar:hover{transform:translateY(-5px);box-shadow:var(--shadow-md);z-index:1}
 .band--chalk .pillar{background:var(--chalk)}
 .pillar .r{font-family:var(--display);font-weight:300;font-size:14px;
   color:var(--verdigris);letter-spacing:.1em}
@@ -433,7 +441,9 @@ p{max-width:58ch}
 
 /* ---------- team ---------- */
 .team{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line-2)}
-.member{background:var(--paper);padding:34px 28px 38px;display:flex;flex-direction:column}
+.member{background:var(--paper);padding:34px 28px 38px;display:flex;flex-direction:column;
+  transition:transform .6s var(--ease-soft),box-shadow .6s var(--ease-soft)}
+.member:not(.member--lead):hover{transform:translateY(-5px);box-shadow:var(--shadow-md);z-index:1}
 .band--chalk .member{background:var(--chalk)}
 .member .mono-i{font-family:var(--display);font-weight:200;font-size:2.4rem;
   color:var(--pewter);letter-spacing:.08em;line-height:1}
