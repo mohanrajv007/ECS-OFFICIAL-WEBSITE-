@@ -567,3 +567,44 @@ table.assign tbody tr:hover{background:rgba(46,95,85,.035)}
 
 @media (max-width:1080px){ .stages{grid-template-columns:repeat(3,1fr)} }
 @media (max-width:640px){ .stages{grid-template-columns:1fr} }
+
+/* ============================================================
+   SUB-NAV — sticky in-page anchor navigation for long pages
+   ============================================================ */
+.subnav{position:sticky;top:84px;z-index:60;background:rgba(252,252,251,.92);
+  backdrop-filter:blur(14px) saturate(160%);border-bottom:1px solid var(--line-2)}
+.subnav .wrap{display:flex;gap:30px;overflow-x:auto;padding-block:16px;scrollbar-width:none}
+.subnav .wrap::-webkit-scrollbar{display:none}
+.subnav a{flex:0 0 auto;font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--pewter);white-space:nowrap;padding-bottom:3px;border-bottom:1px solid transparent;
+  transition:color .3s ease,border-color .3s ease}
+.subnav a:hover{color:var(--verdigris);border-color:var(--verdigris)}
+
+/* ============================================================
+   FAQ — native <details>/<summary>, no JS required
+   ============================================================ */
+.faq{border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line-2)}
+.faq summary{list-style:none;cursor:pointer;padding:26px 40px 26px 0;position:relative;
+  font-family:var(--display);font-weight:300;font-size:clamp(1.05rem,1.6vw,1.3rem);
+  letter-spacing:-.01em;transition:color .3s ease}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:4px;top:50%;transform:translateY(-50%);
+  font-family:var(--body);font-weight:300;font-size:22px;line-height:1;color:var(--verdigris);
+  transition:transform .4s var(--ease)}
+.faq details[open] summary::after{transform:translateY(-50%) rotate(45deg)}
+.faq summary:hover{color:var(--verdigris)}
+.faq .a{padding:0 40px 28px 0;font-size:15px;color:var(--slate);line-height:1.82;max-width:70ch}
+
+/* ============================================================
+   SERVICE CATEGORY DETAIL — reuses .vm's two-column hairline
+   layout for the "what it involves / business situations" split
+   ============================================================ */
+.svc-detail{border-top:1px solid var(--line);padding-top:clamp(30px,4vw,52px);margin-top:clamp(30px,4vw,52px);
+  scroll-margin-top:150px}
+.svc-detail:first-of-type{margin-top:0}
+.svc-value{margin-top:clamp(26px,3.4vw,40px);padding-top:clamp(26px,3.4vw,40px);border-top:1px solid var(--line-2)}
+.svc-value p{font-size:15.5px;color:var(--slate);line-height:1.86;max-width:70ch}
+.svc-list{list-style:none;display:grid;gap:14px;margin-top:4px}
+.svc-list li{position:relative;padding-left:22px;font-size:15px;color:var(--slate);line-height:1.72}
+.svc-list li::before{content:"";position:absolute;left:0;top:.72em;width:6px;height:1px;background:var(--verdigris)}
