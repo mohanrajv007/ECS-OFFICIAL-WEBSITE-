@@ -11,14 +11,15 @@
   var PRESET_MESSAGE = 'Hello, I would like to know more about Excelsior Consultancy Services.';
 
   var css =
-    '.eca-wa{position:fixed;left:26px;bottom:26px;z-index:200;width:56px;height:56px;' +
+    '.eca-wa{position:fixed;right:26px;bottom:96px;z-index:200;width:56px;height:56px;' +
     'border-radius:50%;background:#25D366;color:#FCFCFB;border:1px solid rgba(22,22,26,.08);' +
     'display:flex;align-items:center;justify-content:center;cursor:pointer;text-decoration:none;' +
     'box-shadow:0 6px 20px rgba(22,22,26,.2),0 1px 3px rgba(22,22,26,.12);' +
     'transition:transform .35s ease,box-shadow .35s ease}' +
     '.eca-wa:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(22,22,26,.26)}' +
     '.eca-wa svg{width:28px;height:28px}' +
-    '@media (max-width:480px){.eca-wa{left:16px;bottom:16px;width:52px;height:52px}}';
+    '.eca-wa.eca-wa-hidden{opacity:0;transform:scale(.9);pointer-events:none}' +
+    '@media (max-width:480px){.eca-wa{right:16px;bottom:82px;width:52px;height:52px}}';
 
   var style = document.createElement('style');
   style.textContent = css;
@@ -36,4 +37,15 @@
     '</svg>';
 
   document.body.appendChild(link);
+
+  // Hide this button while the AI assistant panel is open, so the two
+  // stacked buttons never visually collide.
+  var aiPanel = document.querySelector('.eca-panel');
+  if (aiPanel && window.MutationObserver) {
+    var sync = function () {
+      link.classList.toggle('eca-wa-hidden', aiPanel.classList.contains('eca-open'));
+    };
+    new MutationObserver(sync).observe(aiPanel, { attributes: true, attributeFilter: ['class'] });
+    sync();
+  }
 })();
