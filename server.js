@@ -1,6 +1,7 @@
 // Express server for Render: serves the static site and proxies the AI
 // advisory assistant so the Anthropic API key never reaches the browser.
 
+require('dotenv').config();
 const express = require('express');
 const path = require('path');
 
