@@ -152,6 +152,22 @@
     reduce ? reveal(el) : io.observe(el);
   });
 
+  /* landing directly on a URL hash (e.g. a link straight to #enquiries)
+     jumps there before any scrolling occurs, so elements already at rest
+     in the viewport can be missed by the observer — reveal them now */
+  if(!reduce && location.hash){
+    var target = document.querySelector(location.hash);
+    if(target){
+      var toReveal = target.matches('.rv, .split, .up, .stag, .drawline, .record, .method, .files, .solo-fig')
+        ? [target]
+        : target.querySelectorAll('.rv, .split, .up, .stag, .drawline, .record, .method, .files, .solo-fig');
+      Array.prototype.forEach.call(toReveal, function(el){
+        io.unobserve(el);
+        reveal(el);
+      });
+    }
+  }
+
   /* the hero should not wait to be scrolled to */
   setTimeout(function(){
     document.querySelectorAll('.hero .split, .hero .up, .hero-foot span')
