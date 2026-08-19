@@ -6,7 +6,7 @@
 (function () {
   'use strict';
 
-  var ENDPOINT = '/.netlify/functions/chat';
+  var ENDPOINT = '/api/chat';
 
   var css =
     '.eca-btn{position:fixed;right:26px;bottom:26px;z-index:200;width:60px;height:60px;' +
