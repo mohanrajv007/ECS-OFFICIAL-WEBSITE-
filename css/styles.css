@@ -520,6 +520,7 @@ table.assign tbody tr:hover{background:rgba(46,95,85,.035)}
   background-image:url('../assets/consultation.jpg');
   background-size:cover;background-position:center center;
   image-rendering:auto;backface-visibility:hidden;
+  filter:brightness(1.12);
   transform:translateZ(0);will-change:transform}
 
 /* a gentle vignette — darkest behind the text, clear at the edges */
