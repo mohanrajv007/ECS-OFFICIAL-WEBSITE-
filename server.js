@@ -4,9 +4,12 @@
 require('dotenv').config();
 const express = require('express');
 const path = require('path');
+const compression = require('compression');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+app.use(compression());
 
 app.use((req, res, next) => {
   res.setHeader(
@@ -27,7 +30,21 @@ app.use((req, res, next) => {
 });
 
 app.use(express.json({ limit: '20kb' }));
-app.use(express.static(__dirname, { extensions: ['html'] }));
+app.use(
+  express.static(__dirname, {
+    extensions: ['html'],
+    setHeaders(res, filePath) {
+      // CSS/JS/images rarely change independently of a redeploy; a
+      // moderate max-age cuts repeat-visit round trips while ETag
+      // revalidation (on by default) still catches real changes.
+      if (/\.(css|js|jpg|jpeg|png|webp|avif|svg|ico)$/i.test(filePath)) {
+        res.setHeader('Cache-Control', 'public, max-age=86400, must-revalidate');
+      } else if (/\.html$/i.test(filePath)) {
+        res.setHeader('Cache-Control', 'public, max-age=0, must-revalidate');
+      }
+    },
+  })
+);
 
 const SYSTEM_PROMPT = `You are the AI advisory assistant on the website of Excelsior Consultancy Services (ECS), a
 corporate financial advisory firm in Chennai, India offering: Detailed Project Reports & TEV studies,

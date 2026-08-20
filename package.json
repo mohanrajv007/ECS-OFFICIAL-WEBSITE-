@@ -10,6 +10,7 @@
     "node": ">=18"
   },
   "dependencies": {
+    "compression": "^1.8.1",
     "dotenv": "^17.4.2",
     "express": "^4.19.2"
   }
