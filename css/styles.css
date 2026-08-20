@@ -515,16 +515,16 @@ table.assign tbody tr:hover{background:rgba(46,95,85,.035)}
   clip:rect(0,0,0,0);white-space:nowrap;border:0}
 
 /* ============================================================
-   STATEMENT BAND — flat dark background, white type
+   STATEMENT BAND — flat verdigris background, white type
    ============================================================ */
 .band--photo{position:relative;overflow:hidden;isolation:isolate;
-  padding-block:clamp(120px,17vw,240px);color:var(--paper);background:var(--graphite)}
+  padding-block:clamp(120px,17vw,240px);color:var(--paper);background:var(--verdigris)}
 .band--photo .photo{display:none}
 
 .band--photo .stmt,.band--photo .stmt-sub{position:relative;z-index:1}
 .band--photo .stmt{color:var(--paper);
   text-shadow:0 2px 34px rgba(10,12,16,.55),0 1px 3px rgba(10,12,16,.35)}
-.band--photo .stmt em{color:#A8CFC2}
+.band--photo .stmt em{color:#E4F3EE}
 .band--photo .stmt-sub{color:rgba(252,252,251,.90);
   text-shadow:0 1px 18px rgba(10,12,16,.6)}
 .band--photo .stmt-rule{display:none}   /* the hairline reads as a stray mark over a photograph */
