@@ -448,6 +448,10 @@ p{max-width:58ch}
   transition:transform .6s var(--ease-soft),box-shadow .6s var(--ease-soft)}
 .member:not(.member--lead):hover{transform:translateY(-5px);box-shadow:var(--shadow-md);z-index:1}
 .band--chalk .member{background:var(--chalk)}
+.member .mem-fig{aspect-ratio:3/4;background:var(--chalk-2);position:relative;
+  display:grid;place-items:center;margin:0}
+.band--chalk .member .mem-fig{background:var(--chalk-2)}
+.member .mem-fig::before{content:"";position:absolute;inset:10px;border:1px solid var(--line)}
 .member .mono-i{font-family:var(--display);font-weight:200;font-size:2.4rem;
   color:var(--pewter);letter-spacing:.08em;line-height:1}
 .member h3{margin:20px 0 6px}
