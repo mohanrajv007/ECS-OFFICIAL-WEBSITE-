@@ -350,6 +350,11 @@ p{max-width:58ch}
   opacity:.001}
 .up.in{clip-path:inset(0 0 -10% 0);transform:none;opacity:1}
 
+/* guarantee the enquiries section is visible when linked to directly —
+   the scroll-triggered reveal above can be outrun by an instant hash jump */
+#enquiries:target .rv,
+#enquiries:target .up{opacity:1!important;clip-path:none!important;transform:none!important}
+
 /* ---- eyebrow: letterspacing settles as it arrives ---- */
 .eyebrow.up{letter-spacing:.5em;transition:letter-spacing 1.4s var(--ease),
   clip-path 1.15s var(--ease),transform 1.15s var(--ease),opacity .8s var(--ease)}

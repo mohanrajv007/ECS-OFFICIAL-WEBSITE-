@@ -71,7 +71,7 @@ this tight — the restraint is what makes it read as premium.
 - [ ] Add a `favicon.ico`
 - [ ] Add Open Graph tags for link previews
 
-## The contact form
+## The contact formb
 
 `js/main.js` section 8 validates name and email and shows a confirmation, but
 **does not send anything anywhere**. To make it live, the simplest route is a
@@ -101,3 +101,73 @@ if JavaScript is disabled.
 Focus rings are visible and must not be removed. The menu button carries
 `aria-expanded`/`aria-controls`, the form message uses `role="status"`, and every
 animation is disabled under `prefers-reduced-motion`. Keep these intact when editing.
+ <section class="band" id="depth">
+    <div class="wrap">
+      <div class="band-head rv">
+        <div><p class="eyebrow">In detail</p><h2>What the engagement covers.</h2></div>
+        <p class="lede">What the work involves, and the business situations that typically bring it about.</p>
+      </div>
+      <div class="vm rv">
+        <section>
+          <h3>What it involves</h3>
+          <ul class="svc-list">
+            <li>Credit proposal and financial information memorandum preparation</li>
+            <li>Working-capital and term-loan facility structuring</li>
+            <li>Lender identification and approach, matched to the requirement</li>
+            <li>Coordination through appraisal, query resolution and sanction</li>
+            <li>Multi-lender consortium and syndication coordination</li>
+            <li>Collateral and security documentation support</li>
+            <li>Refinancing and facility consolidation across lenders</li>
+          </ul>
+<section class = "brand" id=" deepth">
+    <siv class = "wrap">
+    <div class ="band-head rv">
+      <div><p class ="eyebrow">in detail </p><h2>what the engagement covers.</h2></div>
+       <p class ="lede">what the work involves, and the business situations that typically bring it about.</p>
+        </section>
+        <section>
+        <h3>what it involves</h3>
+        <ul class ="svc-list">
+        <li>credit proposal andd financial information memorandum prepraration </li>
+        <li>working captial and long term-loan facility structuring </li>
+                  <h3>Business situations</h3>
+          <ul class="svc-list">
+            <li>A business raising working-capital or term-loan facilities for the first time</li>
+            <li>A business expanding and requiring a larger or restructured facility</li>
+            <li>A business approaching multiple lenders and needing a coordinated syndication process</li>
+            <li>A business refinancing existing debt on better terms</li>
+            <li>A promoter preparing a complete, lender-ready file before the first approach</li>
+          </ul>
+        </section>
+      </div>
+      <div class="svc-value">
+        <p><strong>Value.</strong> A well-structured, complete proposal moves faster through a lender's process — our role is to prepare that file and carry it through, so the business is not managing the process alone.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHO THIS IS FOR ============ -->
+  <section class="band" id="who">
+    <div class="wrap">
+      <div class="band-head rv">
+        <div><p class="eyebrow">Who this is for</p><h2>Where this fits in your journey.</h2></div>
+        <p class="lede">Not sure whether this is the right starting point? Our <a href="what-we-take-on.html" style="text-decoration:underline;text-underline-offset:3px">What We Take On</a> page maps the kinds of businesses and business situations we typically support.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="band band--dark on-dark" id="cta">
+    <div class="wrap rv" style="text-align:center">
+      <p class="eyebrow">Enquiries</p>
+      <h2 style="margin:20px auto 24px;max-width:20ch">Ready to discuss this with us?</h2>
+      <p class="lede" style="margin:0 auto;max-width:52ch">Tell us about your project and we will tell you what the engagement involves.</p>
+      <div class="hero-links" style="margin-top:44px;justify-content:center">
+        <a class="tlink" href="index.html#enquiries">Request a consultation</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+
