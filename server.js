@@ -9,6 +9,12 @@ const compression = require('compression');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// Render sits one reverse proxy in front of this app; trusting exactly that
+// one hop lets Express read the real client IP from X-Forwarded-For for the
+// /api/chat rate limiter below, without trusting further-left values a
+// client could forge.
+app.set('trust proxy', 1);
+
 app.use(compression());
 
 app.use((req, res, next) => {
@@ -30,6 +36,17 @@ app.use((req, res, next) => {
 });
 
 app.use(express.json({ limit: '20kb' }));
+
+// express.static below serves __dirname as-is, which would otherwise expose
+// this server's own source, dependency manifest and docs to any visitor
+// (dotfiles like .env/.git are already blocked by static's own defaults).
+const NON_PUBLIC_FILES = new Set(['server.js', 'package.json', 'package-lock.json', 'README.md']);
+app.use((req, res, next) => {
+  const name = req.path.replace(/^\/+/, '');
+  if (NON_PUBLIC_FILES.has(name)) return res.status(404).end();
+  next();
+});
+
 app.use(
   express.static(__dirname, {
     extensions: ['html'],
