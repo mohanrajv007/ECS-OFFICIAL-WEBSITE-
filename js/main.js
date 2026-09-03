@@ -135,6 +135,19 @@
         k.classList.add('in');
       });
     }
+
+    /* safety net: a small .up element nested deep inside a container
+       (e.g. a form field several levels under .rv) can be geometrically
+       eligible for its own IntersectionObserver entry but never receive
+       one — observed in the wild on the enquiries form. Once the
+       container itself is confirmed on-screen, reveal any of its own
+       .up descendants that are still waiting, so they are never left
+       permanently invisible. */
+    var nestedUp = el.querySelectorAll('.up:not(.in)');
+    Array.prototype.slice.call(nestedUp).forEach(function(k, i){
+      k.style.transitionDelay = (i * 0.05) + 's';
+      k.classList.add('in');
+    });
   }
 
   var io = new IntersectionObserver(function(entries){
