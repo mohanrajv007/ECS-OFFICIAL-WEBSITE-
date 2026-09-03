@@ -529,12 +529,7 @@ table.assign tbody tr:hover{background:rgba(46,95,85,.035)}
 .band--photo{position:relative;overflow:hidden;isolation:isolate;
   padding-block:clamp(120px,17vw,240px);color:var(--paper);background:var(--verdigris);
   margin-inline:clamp(12px,3vw,40px);border-radius:28px}
-.band--photo .photo{display:block;position:absolute;inset:0;
-  background:url('../assets/construction-tower.jpg') center 62%/cover no-repeat;
-  filter:grayscale(1) contrast(1.05);mix-blend-mode:luminosity;opacity:.42}
-.band--photo::after{content:"";position:absolute;inset:0;z-index:0;
-  background:radial-gradient(ellipse 80% 65% at 50% 50%,rgba(11,28,24,.72) 0%,rgba(11,28,24,.52) 55%,rgba(11,28,24,.32) 100%),
-    linear-gradient(180deg,rgba(11,28,24,.26),rgba(11,28,24,.26))}
+.band--photo .photo{display:none}
 
 .band--photo .stmt,.band--photo .stmt-sub{position:relative;z-index:1}
 .band--photo .stmt{color:var(--paper);
