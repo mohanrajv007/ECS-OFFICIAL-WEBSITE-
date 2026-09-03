@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: ecs-site
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: ANTHROPIC_API_KEY
+        sync: false

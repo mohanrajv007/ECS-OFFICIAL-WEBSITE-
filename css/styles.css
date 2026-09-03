@@ -107,7 +107,7 @@ p{max-width:58ch}
 .nav a:hover{color:var(--graphite)}
 .nav a:hover::after{left:0;right:0}
 .menu-btn{display:none;background:none;border:1px solid var(--line);padding:9px 15px;
-  font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;cursor:pointer}
+  border-radius:999px;font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;cursor:pointer}
 
 /* ---------- hero ---------- */
 .hero{min-height:100svh;display:grid;align-items:center;padding:130px 0 110px;position:relative}
@@ -141,7 +141,8 @@ p{max-width:58ch}
 .band{padding:clamp(80px,11vw,150px) 0}
 .band--chalk{background:var(--chalk)}
 .band--chalk-2{background:var(--chalk-2)}
-.band--dark{background:var(--graphite);color:var(--paper)}
+.band--dark{background:var(--graphite);color:var(--paper);margin-inline:clamp(12px,3vw,40px);
+  border-radius:28px;overflow:hidden}
 .band--dark .lede{color:rgba(252,252,251,.66)}
 .band--dark .eyebrow{color:rgba(252,252,251,.42)}
 .band-head{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);
@@ -169,17 +170,20 @@ p{max-width:58ch}
 .disc-item p{font-size:14.5px;color:var(--slate);line-height:1.74;max-width:50ch}
 
 /* ---------- record ---------- */
-.record{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line-2)}
-.record div{background:var(--paper);padding:44px 24px 48px;text-align:center}
-.band--chalk .record div{background:var(--chalk)}
+.record{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(14px,2vw,22px);background:transparent}
+.record div{background:var(--paper);padding:44px 24px 48px;text-align:center;border-radius:18px;
+  border:1px solid var(--line-2);transition:transform .6s var(--ease-soft),box-shadow .6s var(--ease-soft)}
+.record div:hover{transform:translateY(-4px);box-shadow:var(--shadow-sm)}
+.band--chalk .record div{background:var(--chalk);border-color:var(--line)}
 .record .n{font-family:var(--display);font-weight:200;font-size:clamp(2.7rem,5.4vw,4.4rem);
   line-height:1;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
 .record .l{margin-top:18px;font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;
   color:var(--pewter);line-height:1.9}
 
 /* ---------- method ---------- */
-.method{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line-2)}
-.method article{background:var(--paper);padding:38px 28px 44px;transition:background .5s ease}
+.method{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(16px,2.2vw,26px);background:transparent}
+.method article{background:var(--paper);padding:38px 28px 44px;border-radius:20px;border:1px solid var(--line-2);
+  transition:background .5s ease,transform .6s var(--ease-soft),box-shadow .6s var(--ease-soft)}
 .method article:hover{background:#fff}
 .method .r{font-family:var(--display);font-weight:300;font-size:14px;color:var(--verdigris);letter-spacing:.1em}
 .method h3{margin:16px 0 14px}
@@ -187,9 +191,9 @@ p{max-width:58ch}
 .method .w{margin-top:26px;font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--pewter)}
 
 /* ---------- engagements ---------- */
-.files{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line-2)}
-.file{background:var(--chalk);padding:36px 30px;display:flex;flex-direction:column;
-  transition:background .5s ease}
+.files{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2.2vw,26px);background:transparent}
+.file{background:var(--chalk);padding:36px 30px;display:flex;flex-direction:column;border-radius:20px;
+  border:1px solid var(--line-2);transition:background .5s ease}
 .file:hover{background:var(--paper)}
 .file .ref{font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--verdigris)}
 .file h3{margin:20px 0 16px}
@@ -251,7 +255,7 @@ p{max-width:58ch}
 .field select option{color:var(--graphite);background:var(--paper)}
 .field textarea{resize:vertical;min-height:92px;font-family:var(--body)}
 .sbtn{background:none;border:1px solid var(--graphite);color:var(--graphite);padding:15px 36px;
-  font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;cursor:pointer;
+  border-radius:999px;font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;cursor:pointer;
   transition:background .4s ease,color .4s ease,border-color .4s ease,box-shadow .4s ease,transform .4s ease}
 .sbtn:hover{background:var(--verdigris);border-color:var(--verdigris);color:var(--paper);
   box-shadow:0 10px 26px rgba(46,95,85,.28);transform:translateY(-2px)}
@@ -431,11 +435,11 @@ p{max-width:58ch}
    ============================================================ */
 
 /* ---------- four pillars ---------- */
-.pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line-2)}
-.pillar{background:var(--paper);padding:40px 28px 46px;position:relative;
+.pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(16px,2.2vw,26px);background:transparent}
+.pillar{background:var(--paper);padding:40px 28px 46px;position:relative;border-radius:20px;border:1px solid var(--line-2);
   transition:transform .6s var(--ease-soft),box-shadow .6s var(--ease-soft)}
 .pillar:hover{transform:translateY(-5px);box-shadow:var(--shadow-md);z-index:1}
-.band--chalk .pillar{background:var(--chalk)}
+.band--chalk .pillar{background:var(--chalk);border-color:var(--line)}
 .pillar .r{font-family:var(--display);font-weight:300;font-size:14px;
   color:var(--verdigris);letter-spacing:.1em}
 .pillar h3{margin:18px 0 14px}
@@ -449,11 +453,11 @@ p{max-width:58ch}
 .vm p + p{margin-top:16px}
 
 /* ---------- team ---------- */
-.team{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line-2)}
-.member{background:var(--paper);padding:34px 28px 38px;display:flex;flex-direction:column;
+.team{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2.2vw,26px);background:transparent}
+.member{background:var(--paper);padding:34px 28px 38px;display:flex;flex-direction:column;border-radius:20px;border:1px solid var(--line-2);
   transition:transform .6s var(--ease-soft),box-shadow .6s var(--ease-soft)}
 .member:not(.member--lead):hover{transform:translateY(-5px);box-shadow:var(--shadow-md);z-index:1}
-.band--chalk .member{background:var(--chalk)}
+.band--chalk .member{background:var(--chalk);border-color:var(--line)}
 .member .mem-fig{aspect-ratio:3/4;background:var(--chalk-2);position:relative;
   display:grid;place-items:center;margin:0}
 .band--chalk .member .mem-fig{background:var(--chalk-2)}
@@ -523,7 +527,8 @@ table.assign tbody tr:hover{background:rgba(46,95,85,.035)}
    STATEMENT BAND — flat verdigris background, white type
    ============================================================ */
 .band--photo{position:relative;overflow:hidden;isolation:isolate;
-  padding-block:clamp(120px,17vw,240px);color:var(--paper);background:var(--verdigris)}
+  padding-block:clamp(120px,17vw,240px);color:var(--paper);background:var(--verdigris);
+  margin-inline:clamp(12px,3vw,40px);border-radius:28px}
 .band--photo .photo{display:none}
 
 .band--photo .stmt,.band--photo .stmt-sub{position:relative;z-index:1}
@@ -554,11 +559,11 @@ table.assign tbody tr:hover{background:rgba(46,95,85,.035)}
    STAGES — the IDEA → START → GROW → SCALE → TRANSFORM rail
    Same grid/hairline/hover language as .pillars and .method.
    ============================================================ */
-.stages{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line-2)}
-.stage{background:var(--paper);padding:34px 22px 40px;position:relative;
+.stages{display:grid;grid-template-columns:repeat(5,1fr);gap:clamp(14px,2vw,22px);background:transparent}
+.stage{background:var(--paper);padding:34px 22px 40px;position:relative;border-radius:18px;border:1px solid var(--line-2);
   transition:transform .6s var(--ease-soft),box-shadow .6s var(--ease-soft)}
 .stage:hover{transform:translateY(-5px);box-shadow:var(--shadow-md);z-index:1}
-.band--chalk-2 .stage{background:var(--chalk-2)}
+.band--chalk-2 .stage{background:var(--chalk-2);border-color:var(--line)}
 .stage .r{font-family:var(--display);font-weight:300;font-size:11px;letter-spacing:.1em;color:var(--verdigris)}
 .stage h3{margin:16px 0 12px;font-size:1.05rem;letter-spacing:.02em;text-transform:uppercase;font-weight:400}
 .stage p{font-size:13.5px;color:var(--slate);line-height:1.7}
