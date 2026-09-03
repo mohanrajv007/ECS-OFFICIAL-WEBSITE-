@@ -59,7 +59,11 @@
 }
 
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scrollbar-color:var(--pewter) var(--chalk)}
+::-webkit-scrollbar{width:11px;height:11px}
+::-webkit-scrollbar-track{background:var(--chalk)}
+::-webkit-scrollbar-thumb{background:var(--pewter);border-radius:999px;border:2px solid var(--chalk)}
+::-webkit-scrollbar-thumb:hover{background:var(--verdigris)}
 body{background:var(--paper);color:var(--graphite);font-family:var(--body);
   font-weight:300;font-size:17px;line-height:1.8;letter-spacing:.004em;
   -webkit-font-smoothing:antialiased;overflow-x:hidden}

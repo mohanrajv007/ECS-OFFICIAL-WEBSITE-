@@ -364,7 +364,7 @@ justify-content : center>
 <h2 style ="margin :20px auto 24px ;max-width:20ch">ready to discuss this with us ?</h2>
 
 <div class = "hero-link" style ="margin-top:44px;">
-<justify-content ; center >
+<justify-content ; center 
 </div>
 </div>
 </selection>
