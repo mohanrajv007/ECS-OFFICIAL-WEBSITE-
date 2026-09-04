@@ -20,8 +20,8 @@ app.use(compression());
 app.use((req, res, next) => {
   res.setHeader(
     'Content-Security-Policy',
-    "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; " +
-      "font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; " +
+    "default-src 'self'; script-src 'self' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; " +
+      "font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com; " +
       "form-action 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'"
   );
   res.setHeader('X-Frame-Options', 'DENY');
