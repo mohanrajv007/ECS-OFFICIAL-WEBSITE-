@@ -364,7 +364,7 @@ justify-content : center>
 <h2 style ="margin :20px auto 24px ;max-width:20ch">ready to discuss this with us ?</h2>
 
 <div class = "hero-link" style ="margin-top:44px;">
-<justify-content ; center 
+<justify-content ; center
 </div>
 </div>
 </selection>
@@ -549,6 +549,7 @@ modelling , not opinion </li>
 
 <section class ="band" id="who">
 <div class ="wrap">
+<selection class>
 <div class ="band-head rv">
 <div><p class ="eyebrow">who this is for</<p><h2>where this fits in yoyr journey.<h2>,</div>
 <p class="lead">not sure whether this is the right starting point ?our <a
