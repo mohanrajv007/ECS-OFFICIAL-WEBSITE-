@@ -129,6 +129,49 @@ animation is disabled under `prefers-reduced-motion`. Keep these intact when edi
       <li>credit proposal and financial information
       memorandum prepration
   <>
+  <div class="warp">
+  <div class="band-head rv">
+  <div><p class ='eyebrow'>in detail</p><h2>what the enagement cover.</h2></div>
+  <p class='lede'>what the work involves,the business situations that tupically bring it about.</p>
+  </div>
+  <div class ="vm rv">
+  <selection>
+  <h3>what it involves</h3>
+  <ul class="svc-list">
+  <li>credit proposal and financial information memorandum opreparation</li>
+  <li>working proposal and financial information memorandum preparation</li>
+  <li>working-captital and term-loan facility structing</li>
+  <li>lender identification and approach, matched to the reqirement</li>
+  <li>coordination through appraisal , query resolution and saction</li>
+  <li>multi-lender consortium and syndication coordination</li>
+  <li>collateral and security documenation support</li>
+  <li>refinancing and facility consolidation across lenders</li>
+  </ul>
+  <section class ="band" id ="depth">
+  <div class ="wrap">
+  </div>
+  <div class ="vm rv">
+  <secltion>
+  <h3>what it involves </h3>
+  <ul class ="svc-list">
+  <li>credit proposal and financial information memorandum prepration
+  <>
+  <div class="warp">
+  <div class="band-head rv">
+  <div class="band-head rv">
+  <div><p class ="eyebrow"in detail><p><h2>what the engament cover .</h2></div>
+  <p class="lede"> what the work involves, business situation that typically bring it about.</p>
+  </div>  
+  <div class ='vm rv'>
+  <selection>
+  <h3>what it involves</h3>
+  <ul class="svc-list">
+  <li>credit proposal and financial information memorandum opreparation</li>
+  <li>working proposal and financial information memorandum preparation</li>
+  <li>working-captial and term-loan facility structing</li>
+  <li>coordination through appraisal, query resolution and section</li>
+  <li>multi-lender consortium and syndication coordination</li>
+  <li>refinancing and facility consolidation across lenders</li>
       <li>working-capital  and term-loan facility structuring <li>
       <li>lender identification and approach , matched to the  reguirement </li>
       <li> coordination through appraisal, query resolution and sanction</li>
@@ -496,6 +539,88 @@ modelling , not opinion </li>
   <section>
   <h3>what it involves </h3>
   <ul class="svc-list">
+  <h3>what it involves </h3>
+  <ul class="svc-list">
+  <li>financial desicion-making supporting</li>
+  <li>cost management and margin review </li>
+  <li>business planning and expension-decision analysis</li>
+  <li>performance analysis against internal or industry benchmarks</li>
+  <li>process improvement recommendation </li>
+  <Li>make-verus buy and outsoucing evaluation </li>
+  <li>independent advisory grounded in financial modelling ,not opioion
+  </ul>
+  <selection>
+  <selection>
+  <slection class="band" id="depth">
+  <div class =class ="wrap">
+  <div class ="band-hand rv">
+  <div><p class ="eyebrow">in detail </p><h2>what the engagement cover.<h2></div>
+  <p class ="lede">what the work involes , and the buiness situation that typically bring it about.</p>
+  <selection class ="svc-list">
+  <li>singnificant business decision under consideration</li>
+  <li>a business seeking an indipendent view before committing </li>
+
+
+  </div>
+  </div class = "vm rv">
+  <selection>
+  <h3>what it involves </h3>
+  <ul class="svc-list">
+
+  <li>financial desicion-making supporting</li>
+  <li>cost management and margin review</li>
+  <li>cost management and margin review </li>
+  <li>business planning and expension-decision analysis</li>
+  <li>performance analysis against internal or industry benchmarks</li>
+  <li>precess improvement recommendation </li>
+  <li>make-verus buy and ousoucing evauation </li>
+  <li>independent advisory grounded in financial modellling , not opioion
+  </ul>
+  <selection>
+  <selection>
+  <section class ="band" id ="depth">
+  <div class = class="wrap">
+  <div class ="band-handrv"
+  <div><p class ="eyebrow">what the work involes , and the business situation that typically bring it about.<p>
+  <selection class ='svc-list'>
+  <li> singnificat business decision under cansideration</li>
+  <li>a business seeking an indipendent view before committing </li>
+
+
+
+
+  <div>
+  <selction>
+  <h3>what it involves </h3>
+  <ul class="svc-list"
+
+   <li>financial desicion-making supporting </li>
+   <li>cost management and margin review</li>
+   <li>cost management and margin review <li>
+   <li>business planning and expension-decision</li>
+   <li>performance analysis against internal or industry benchmarks </li>
+   <li>make-verus impovement recommendation </LI>
+   <li>independing advisory grounded in financial modelling , not opioion</ul>
+   </ul>
+
+   <selection>
+   <selection>
+   <selction class ="band" id="depth"
+   <div class = class = "wrapa">
+   <div class = "band-handrv"
+   <div><p class ="eyebrow">what the work involes , and the business situation that typically bring it about.<p>
+   <selection> singificant businness decision under consideration</li>
+   <li> singnificat business decision under consideration </li>
+
+
+
+
+
+   <div>
+   <selection>
+   <h3>what it involves <h3>
+   <ul class = "svc-list"
+   <<<<<<<<ul>>>>>>>>>>
   <li>sinancial decision- making support </li>
   <li>cost management and margin review </li>
   <li>busniness planning and expansion-decision analysis</li>
