@@ -572,7 +572,7 @@ table.assign tbody tr:hover{background:rgba(46,95,85,.035)}
 
 @media (max-width:1080px){ .stages{grid-template-columns:repeat(3,1fr)} }
 @media (max-width:640px){ .stages{grid-template-columns:1fr} }
-
+ 
 /* ============================================================
    SUB-NAV — sticky in-page anchor navigation for long pages
    ============================================================ */
@@ -611,5 +611,5 @@ table.assign tbody tr:hover{background:rgba(46,95,85,.035)}
 .svc-value{margin-top:clamp(26px,3.4vw,40px);padding-top:clamp(26px,3.4vw,40px);border-top:1px solid var(--line-2)}
 .svc-value p{font-size:15.5px;color:var(--slate);line-height:1.86;max-width:70ch}
 .svc-list{list-style:none;display:grid;gap:14px;margin-top:4px}
-.svc-list li{position:relative;padding-left:22px;font-size:15px;color:var(--slate);line-height:1.72}
+.svc-list li{position:relative;padding-left:22px;font-size:15px;color:var (--slate);line-height:1.72}
 .svc-list li::before{content:"";position:absolute;left:0;top:.72em;width:6px;height:1px;background:var(--verdigris)}
