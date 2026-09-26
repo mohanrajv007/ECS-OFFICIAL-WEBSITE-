@@ -458,6 +458,18 @@ justify-content : center>
 </div>
 </selection>
 
+<div class="pillar rv">
+<artical  class ="pillar"><span class ="r"></span><h3>performance review<h3>
+<p>review of business performance, structure and underlying driver.<p></article>
+<artical class ="piller"><span class ="r">IT</span><h3>financial modelling</h3>
+<p>modelling build to support the decisions under consideration.</p></articale>
+<articale class='piller'><span class='r'>IT</span><h3>practical modelling</h3>
+<p>recommendation grounded in the number rather then general opinion.</p><article>
+</div>
+</selection>
+
+
+
   <!-- ============ DEPTH ============ -->
   <section class="band" id="depth">
     <div class="wrap">
