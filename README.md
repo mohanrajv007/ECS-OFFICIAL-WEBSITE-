@@ -68,8 +68,8 @@ this tight — the restraint is what makes it read as premium.
 - [ ] Higher-resolution statement photograph — the current source is only
       735×490 and has been upscaled
 - [ ] Connect the contact form (see below)
-- [ ] Add a `favicon.ico`
-- [ ] Add Open Graph tags for link previews
+- [x] Add a favicon (`assets/favicon.svg`)
+- [x] Add Open Graph tags for link previews
 
 ## The contact formb
 
@@ -161,7 +161,7 @@ animation is disabled under `prefers-reduced-motion`. Keep these intact when edi
   <div class="band-head rv">
   <div><p class ="eyebrow"in detail><p><h2>what the engament cover .</h2></div>
   <p class="lede"> what the work involves, business situation that typically bring it about.</p>
-  </div>  
+  </div>
   <div class ='vm rv'>
   <selection>
   <h3>what it involves</h3>
@@ -507,6 +507,8 @@ justify-content : center>
             <li>A business reviewing performance against its own expectations</li>
             <li>A business evaluating a new revenue stream, product line or market</li>
 <h3> what it involves</h3>
+<li>apromoter weighing option without an inn-house finance function
+signification 
 <ul class="svc-list">
 <li>financial decision-making supporting</li>
 <li>cost management and margin review</li>
